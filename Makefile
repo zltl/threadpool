@@ -9,7 +9,7 @@ TARGET_DIR ?= $(SOURCE_DIR)/target
 THREAD_DEBUG ?=
 
 COMMON_FLAGS += -Wall -Wextra -Werror -ggdb -Wno-unused-result \
-				-I$(SOURCE_DIR)
+				-I$(SOURCE_DIR) -lpthread
 
 ifneq ($(THREAD_DEBUG),)
 	COMMON_FLAGS += -DTHREAD_DEBUG -fsanitize=address -lasan
